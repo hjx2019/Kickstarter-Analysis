@@ -14,12 +14,12 @@ Also, in this project, I start to manage my project in GitHub, and try to comple
 ### Analysis of Outcomes Based on Launch Date
 
 1. Convert Date:
-According to a brief overview of the data, to find the Outcomes Based on Launch Date, the first step is to convert the date from a special version (UNIX timestamp) to a date format. Forumula used in CELL(T2) is =(((J2/60)/60/24)+DATE(1970,1,1)) , then extend to the whole column and format to DATE.
+According to a brief overview of the data, to find the Outcomes Based on Launch Date, the first step is to convert the date from a special version (UNIX timestamp) to a date format. Forumula used in CELL(T2) is _=(((J2/60)/60/24)+DATE(1970,1,1))_ , then extend to the whole column and format to DATE.
 
 2. Find the MONTH:
 Since the date are grouped in months and are cross years, which means YEAR and DAY should be hidden.(And a YEAR column is already built up using YEAR()). I came up with two solutions:
-  - colone a column: Cell(V2) = T2, extend to the whole column. Then format the column in 'Customed format', using "mmm" which means 3-letter month format;
-  - an alternative way: Cell(V2) = TEXT(T2,"mmm").
+   - colone a column: Cell(V2) = T2, extend to the whole column. Then format the column in 'Customed format', using "mmm" which means 3-letter month format;
+   - an alternative way: Cell(V2) = TEXT(T2,"mmm").
 Comparing the two, the first formula is a integer, having "year and day" info, and the second formula returns a text, discarding the "year and day" info. I chose the first one here. 
 
 3. Generate Pivot table
