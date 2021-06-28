@@ -21,10 +21,13 @@ Since the date are grouped in months and are cross years, which means YEAR and D
 Comparing the two, the first formula is a integer, having "year and day" info, and the second formula returns a text, discarding the "year and day" info. I chose the first one here. 
 
 Insert a pivot table using default settings. Named the Sheet as Theater Outcomes by Launch Date. Drag fields into filters/columns/rows/values. That's easy by following the instruction. When dragging the new generated column "months" into rows, it has drill-down rows of Year and Quarter. 
+
 ![Year and Quarter Info](/resources/Yearquartermonth.png)
+
 I could just remove these two, and get the correct result. Here's the point: when the years and quarters are needed by chance after this set up, it's easier to show them than using text-format month.(the solution 2 above)
 
 Use the icon beside the colomn labels, I chose "sort Z to A" as a descending order. Then chose the whole table to insert a chart. Double click the chart, and all the settings are shown on the right side. There's also a green plus sign outside the right up corner of the chart, through which the chart elements can be selected or deselected by a click.
+
 ![Add chart title here](/resources/Chart_elements.png)
 
 After all the editing, the chart is saved below:
