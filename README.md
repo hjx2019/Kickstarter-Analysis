@@ -26,11 +26,11 @@ Comparing the two, the first formula is a integer, having "year and day" info, a
 Insert a pivot table using default settings. Named the Sheet as Theater Outcomes by Launch Date. Drag fields into filters/columns/rows/values. That's easy by following the instruction. 
 
 4. Modify the display of MONTH
-When dragging the new generated column "months" into rows, it has drill-down rows of Year and Quarter. 
+When dragging the new generated column "months" into rows, it has drill-down rows of Year and Quarter. By removing these two fields, I got the correct result. 
 
 ![Year and Quarter Info](/resources/Yearquartermonth.png)
 
-   - By removing these two fields, I got the correct result. Here's the point: when the years and quarters are needed by chance after this set up, it's easier to show them than using text-format month.(the 2nd solution in step 2)
+>Here's the point: when the years and quarters are needed by chance after this set up, it's easier to show them than using text-format month.(the 2nd solution in step 2)
 
 5. Editing the Visualization - Line Chart
 Use the icon beside the colomn labels, I chose "sort Z to A" as a descending order. Then chose the whole table to insert a chart. Double click the chart, and all the settings are shown on the right side. 
