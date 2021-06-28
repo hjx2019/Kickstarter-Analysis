@@ -13,38 +13,44 @@ Also, in this project, I start to manage my project in GitHub, and try to comple
 
 ### Analysis of Outcomes Based on Launch Date
 
-1. Convert Date:
+1. **Convert Date:**
 According to a brief overview of the data, to find the Outcomes Based on Launch Date, the first step is to convert the date from a special version (UNIX timestamp) to a date format. Forumula used in CELL(T2) is _=(((J2/60)/60/24)+DATE(1970,1,1))_ , then extend to the whole column and format to DATE.
 
-2. Find the MONTH:
+2. **Find the MONTH:**
 Since the date are grouped in months and are cross years, which means YEAR and DAY should be hidden.(And a YEAR column is already built up using YEAR()). I came up with two solutions:
    - colone a column: Cell(V2) = T2, extend to the whole column. Then format the column in 'Customed format', using "mmm" which means 3-letter month format;
    - an alternative way: Cell(V2) = TEXT(T2,"mmm").
 Comparing the two, the first formula is a integer, having "year and day" info, and the second formula returns a text, discarding the "year and day" info. I chose the first one here. 
 
-3. Generate Pivot table
+3. **Generate Pivot table:**
 Insert a pivot table using default settings. Named the Sheet as Theater Outcomes by Launch Date. Drag fields into filters/columns/rows/values. That's easy by following the instruction. 
 
-4. Modify the display of MONTH
+4. **Modify the display of MONTH:**
 When dragging the new generated column "months" into rows, it has drill-down rows of Year and Quarter. By removing these two fields, I got the correct result. 
 
 ![Year and Quarter Info](/resources/Yearquartermonth.png)
 
 >Here's the point: when the years and quarters are needed by chance after this set up, it's easier to show them than using text-format month.(the 2nd solution in step 2)
 
-5. Editing the Visualization - Line Chart
+5. **Editing the Visualization - Line Chart:**
 Use the icon beside the colomn labels, I chose "sort Z to A" as a descending order. Then chose the whole table to insert a chart. Double click the chart, and all the settings are shown on the right side. 
 To edit the elements of the chart, there's a green plus sign outside the right up corner of the chart, through which the chart elements can be selected or deselected by a click.
 
 ![Add chart title here](/resources/Chart_elements.png)
 
-6. Result of deliverable1:
+6. **Result of deliverable 1:**
 After all the editing, the chart is saved below:
 
 ![Theater Outcomes vs Launch Date](/resources/Theater_Outcomes_vs_Launch.png)
 
 ---
 ### Analysis of Outcomes Based on Goals
+
+1. **Aquiring the titles:**
+Copy the column titles into Excel, paste(_value only_) in any cell; keep the cells selected and copy again, then paste(_Transpose_) in Cell(A1). Since the row names are shown in a picture, type in the row names in Column A. 
+
+2. **Dive into COUNTIFS():**
+
 
 ![Outcomes Based on Goals](/resources/Outcomes_vs_Goals.png)
 
