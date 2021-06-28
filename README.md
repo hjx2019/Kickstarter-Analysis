@@ -18,8 +18,8 @@ According to a brief overview of the data, to find the Outcomes Based on Launch 
 
 2. Find the MONTH:
 Since the date are grouped in months and are cross years, which means YEAR and DAY should be hidden.(And a YEAR column is already built up using YEAR()). I came up with two solutions:
-  * colone a column: Cell(V2) = T2, extend to the whole column. Then format the column in 'Customed format', using "mmm" which means 3-letter month format;
-  * an alternative way: Cell(V2) = TEXT(T2,"mmm").
+  - colone a column: Cell(V2) = T2, extend to the whole column. Then format the column in 'Customed format', using "mmm" which means 3-letter month format;
+  - an alternative way: Cell(V2) = TEXT(T2,"mmm").
 Comparing the two, the first formula is a integer, having "year and day" info, and the second formula returns a text, discarding the "year and day" info. I chose the first one here. 
 
 3. Generate Pivot table
@@ -43,6 +43,7 @@ After all the editing, the chart is saved below:
 
 ![Theater Outcomes vs Launch Date](/resources/Theater_Outcomes_vs_Launch.png)
 
+---
 ### Analysis of Outcomes Based on Goals
 
 ![Outcomes Based on Goals](/resources/Outcomes_vs_Goals.png)
