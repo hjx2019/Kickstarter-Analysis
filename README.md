@@ -30,7 +30,7 @@ When dragging the new generated column "months" into rows, it has drill-down row
 
 ![Year and Quarter Info](/resources/Yearquartermonth.png)
 
-By removing these two fields, I got the correct result. Here's the point: when the years and quarters are needed by chance after this set up, it's easier to show them than using text-format month.(the 2nd solution in step 2)
+   - By removing these two fields, I got the correct result. Here's the point: when the years and quarters are needed by chance after this set up, it's easier to show them than using text-format month.(the 2nd solution in step 2)
 
 5. Editing the Visualization - Line Chart
 Use the icon beside the colomn labels, I chose "sort Z to A" as a descending order. Then chose the whole table to insert a chart. Double click the chart, and all the settings are shown on the right side. 
