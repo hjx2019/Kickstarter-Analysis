@@ -5,7 +5,7 @@
 
 ### Purpose
 
-    In this project, the data of over 4000 crowdfunding projects is analyzed and visualized. Using Pivot table and charts, we can find the count of projects with different outcomes in various categories, date, and country. By visualizing the result, comparison accross categories and trends in any country are very obvious.
+In this project, the data of over 4000 crowdfunding projects is analyzed and visualized. Using Pivot table and charts, we can find the count of projects with different outcomes in various categories, date, and country. By visualizing the result, comparison accross categories and trends in any country are very obvious.
 
 Also, in this project, I start to manage my project in GitHub, and try to complete a data analysis project from aquiring request to writing the closing report. 
 
