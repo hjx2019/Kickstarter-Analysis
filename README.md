@@ -62,7 +62,11 @@ Starting from Cell(B2) _=COUNTIFS(Kickstarter!$D:$D,"<1000",Kickstarter!$F:$F,"s
 
 ![sum and ratio](/resources/sumratio.png)
 
-5. **Insert Line-Chart:** Select all data and insert the line-chart. Click the Design->Select data. 
+5. **Insert Line-Chart:** Select all data and insert the line-chart. Click the Design->Select data. Then edit every column and row.
+
+![edit data](/resources/editdata.png)
+
+6. **The Chart**
 
 ![Outcomes Based on Goals](/resources/Outcomes_vs_Goals.png)
 
