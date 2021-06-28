@@ -5,7 +5,7 @@
 
 ### Purpose
 
-In this project, the data of over 4000 crowdfunding projects is analyzed and visualized. Using Pivot table and charts, we can find the count of projects with different outcomes in various categories, date, and country. By visualizing the result, comparison accross categories and trends in any country are very obvious.
+    In this project, the data of over 4000 crowdfunding projects is analyzed and visualized. Using Pivot table and charts, we can find the count of projects with different outcomes in various categories, date, and country. By visualizing the result, comparison accross categories and trends in any country are very obvious.
 
 Also, in this project, I start to manage my project in GitHub, and try to complete a data analysis project from aquiring request to writing the closing report. 
 
@@ -18,8 +18,8 @@ According to a brief overview of the data, to find the Outcomes Based on Launch 
 
 2. Find the MONTH:
 Since the date are grouped in months and are cross years, which means YEAR and DAY should be hidden.(And a YEAR column is already built up using YEAR()). I came up with two solutions:
-* colone a column: Cell(V2) = T2, extend to the whole column. Then format the column in 'Customed format', using "mmm" which means 3-letter month format;
-* an alternative way: Cell(V2) = TEXT(T2,"mmm").
+  * colone a column: Cell(V2) = T2, extend to the whole column. Then format the column in 'Customed format', using "mmm" which means 3-letter month format;
+  * an alternative way: Cell(V2) = TEXT(T2,"mmm").
 Comparing the two, the first formula is a integer, having "year and day" info, and the second formula returns a text, discarding the "year and day" info. I chose the first one here. 
 
 3. Generate Pivot table
@@ -30,7 +30,7 @@ When dragging the new generated column "months" into rows, it has drill-down row
 
 ![Year and Quarter Info](/resources/Yearquartermonth.png)
 
-By removing these two fields, I got the correct result. Here's the point: when the years and quarters are needed by chance after this set up, it's easier to show them than using text-format month.(the solution 2 above)
+By removing these two fields, I got the correct result. Here's the point: when the years and quarters are needed by chance after this set up, it's easier to show them than using text-format month.(the 2nd solution in step 2)
 
 5. Editing the Visualization - Line Chart
 Use the icon beside the colomn labels, I chose "sort Z to A" as a descending order. Then chose the whole table to insert a chart. Double click the chart, and all the settings are shown on the right side. 
