@@ -5,19 +5,19 @@
 
 ### Purpose
 
-In this project, the data of over 4000 crowdfunding projects is analyzed and visualized. Using Pivot table and charts, we can find the count of projects with different outcomes in various categories, date, and country. By visualizing the result, comparison accross categories and trends in any country are very obvious.
+In this project, the data of over 4000 crowdfunding projects is analyzed and visualized. Using the Pivot table and charts, we can find the count of projects with different outcomes in various categories, date, and country. By visualizing the result, comparison across categories and trends in any country is very obvious.
 
-Also, in this project, I start to manage my project in GitHub, and try to complete a data analysis project from aquiring request to writing the closing report. 
+Also, in this project, I start to manage my project on GitHub, and try to complete a data analysis project from acquiring requests to writing the closing report. 
 
 ## Analysis and Challenges
 
 ### Analysis of Outcomes Based on Launch Date
 
 1. **Convert Date:**
-According to a brief overview of the data, to find the Outcomes Based on Launch Date, the first step is to convert the date from a special version (UNIX timestamp) to a date format. Forumula used in CELL(T2) is _=(((J2/60)/60/24)+DATE(1970,1,1))_ , then extend to the whole column and format to DATE.
+According to a brief overview of the data, to find the Outcomes Based on Launch Date, the first step is to convert the date from a special version (UNIX timestamp) to a date format. Formula used in CELL(T2) is _=(((J2/60)/60/24)+DATE(1970,1,1))_ , then extend to the whole column and format to DATE.
 
 2. **Find the MONTH:**
-Since the requirement in output of date are grouped by months and are cross years, which means YEAR and DAY cannot be seen.(And a YEAR column is already built up using YEAR()). I came up with two solutions:
+Since the requirement in the output of dates is grouped by months and cross-year, which means YEAR and DAY cannot be seen. (And a YEAR column is already built up using YEAR()). I came up with two solutions:
    - same value, different format: Cell(V2) = T2, extend to the whole column; Then format the column in 'Customed format', using "mmm" which means 3-letter month format;
    - convert the value: Cell(V2) = TEXT(T2,"mmm").
 > Comparing the two, the first formula keeps the "year and day" info, and the second formula returns a text, discarding the "year and day" info. I chose the first one here. 
@@ -33,7 +33,7 @@ When dragging the new generated column "months" into rows, it has drill-down row
 >Here's the point: when the years and quarters are needed by chance after this set up, it's easier to show them than using text-format month.(the 2nd solution in step 2)
 
 5. **Editing the Visualization - Line Chart:**
-Use the icon beside the colomn labels, I chose "sort Z to A" as a descending order. Then chose the whole table to insert a chart. Double click the chart, and all the settings are shown on the right side. 
+Use the icon beside the column labels, I chose "sort Z to A" as a descending order. Then chose the whole table to insert a chart. Double click the chart, and all the settings are shown on the right side. 
 To edit the elements of the chart, there's a green plus sign outside the right up corner of the chart, through which the chart elements can be selected or deselected by a click.
 
 ![Add chart title here](/resources/Chart_elements.png)
@@ -46,11 +46,11 @@ After all the editing, the chart is saved below:
 ---
 ### Analysis of Outcomes Based on Goals
 
-1. **Aquiring the titles:**
+1. **Acquiring the titles:**
 Copy the column titles into Excel, paste(_value only_) in any cell; keep the cells selected and copy again, then paste(_Transpose_) in Cell(A1). Since the row names are shown in a picture, type in the row names in Column A. 
 
 2. **Dive into COUNTIFS():**
-Starting from Cell(B2) _=COUNTIFS(Kickstarter!$D:$D,"<1000",Kickstarter!$F:$F,"successful")_ and auto fill the whole column, then change the formula one by one. When the whole column is modified, drag and extend to the second and Third Column. Modify the criteria of Outcomes. To check it using _Formulas - show formulas_. 
+Starting from Cell(B2) _=COUNTIFS(Kickstarter!$D:$D,"<1000",Kickstarter!$F:$F,"successful")_ and auto-fill the whole column, then change the formula one by one. When the whole column is modified, drag and extend to the second and third columns. Modify the criteria of Outcomes. To check it using _Formulas - show formulas_. 
 
 ![Check Formula](/resources/showformulas.png)
 
@@ -72,16 +72,16 @@ Starting from Cell(B2) _=COUNTIFS(Kickstarter!$D:$D,"<1000",Kickstarter!$F:$F,"s
 
 ### Challenges and Difficulties Encountered
 
-* In deliverable 2, double check the formula needs extra time. But the "show formulas" really helps. 
-* Also in this one, the line chart didn't come automatically, because the numbers of the first 4 columns are integers and the last 3 columns are ratios which are less than 1. In this case, I need to modify the rows and columns manually. I also tested two other ways that works well: 1 hide colomn B:D; 2 hold Ctrl and select columns. They don't need extra data editing.
+* In deliverable 2, double-check the formula needs extra time. But the "show formulas" really helps. 
+* Also in this one, the line chart didn't come automatically, because the numbers of the first 4 columns are integers and the last 3 columns are ratios that are less than 1. In this case, I need to modify the rows and columns manually. I also tested two other ways that work well: 1 hide column B:D; 2 hold Ctrl and select columns. They don't need extra data editing.
 
 
 ## Results
 
-- What are two conclusions you can draw about the Outcomes based on Launch Date?
+- What are two conclusions you can draw about the Outcomes-based on the Launch Date?
 
-  * According to the chart, the projects realated to theater are more launched in every Feburary, April, May, June, July, August, and October. Which means that other months are low season of project launching.
-  * Within these 7 months, there are more successful projects launched in May, June, and July, which indicates that more porjects are successfully funded in these months. 
+  * According to the chart, the projects realated to theater are more launched every February, April, May, June, July, August, and October. This means that other months are a low season of project launching.
+  * Within these 7 months, there are more successful projects launched in May, June, and July, which indicates that more projects are successfully funded in these months. 
 
 - What can you conclude about the Outcomes based on Goals?
 
